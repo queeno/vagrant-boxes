@@ -1,0 +1,12 @@
+machines:
+  - role: puppet-master
+    ip: 192.168.33.200
+    template: hashicorp/precise64
+    preamble: preambles/puppet-ubuntu-preamble.sh
+  - role: puppet-slave
+    ip: 192.168.33.201
+    template: hashicorp/precise64
+    preamble: preambles/puppet-ubuntu-preamble.sh
+  - role: centos-6.5
+    ip: 192.168.33.202
+    template: chef/centos-6.5
