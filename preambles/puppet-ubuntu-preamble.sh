@@ -21,8 +21,11 @@ apt-get -qq install \
 
 if [ "${1}" == 'puppet-master' ]; then
   apt-get -qq install \
-    puppetmaster=${PUPPET_VERSION}
+    puppetmaster=${PUPPET_VERSION} \
+    puppet-common=${PUPPET_VERSION} \
+    puppetmaster-common=${PUPPET_VERSION}
 else
   apt-get -qq install \
-    puppet=${PUPPET_VERSION}
+    puppet=${PUPPET_VERSION} \
+    puppet-common=${PUPPET_VERSION}
 fi
