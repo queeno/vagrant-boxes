@@ -10,3 +10,6 @@ machines:
   - role: centos-6.5
     ip: 192.168.33.202
     template: chef/centos-6.5
+  - role: trusty
+    ip: 192.168.33.203
+    template: ubuntu/trusty64
