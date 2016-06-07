@@ -1,7 +1,7 @@
 #!/bin/bash
 
 PUPPETREPO='http://apt.puppetlabs.com'
-CODENAME='precise'
+CODENAME='trusty'
 
 # Set the facter/hiera/puppet version
 FACTER_VERSION=2.4.1-1puppetlabs1
