@@ -12,7 +12,11 @@ Vagrant.configure('2') do |config|
     Dir.mkdir SHARE_DIR
   end
 
-  config.vm.synced_folder 'vagrant-test/', '/usr/share/vagrant-test', type: 'nfs', mount_options: ["noatime", "nodiratime", "rsize=131072", "wsize=131072"]
+  config.hostmanager.enabled = true
+  config.hostmanager.manage_guest = true
+  config.vm.provision :hostmanager
+
+  #config.vm.synced_folder 'vagrant-test/', '/usr/share/vagrant-test', type: 'nfs', mount_options: ["noatime", "nodiratime", "rsize=131072", "wsize=131072"]
 
   machines.each do |box|
     config.vm.define box['role'] do |machine|
