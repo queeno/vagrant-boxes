@@ -19,13 +19,6 @@ apt-get -qq install \
   facter=${FACTER_VERSION} \
   hiera=${HIERA_VERSION}
 
-if [ "${1}" == 'puppet-master' ]; then
-  apt-get -qq install \
-    puppetmaster=${PUPPET_VERSION} \
-    puppet-common=${PUPPET_VERSION} \
-    puppetmaster-common=${PUPPET_VERSION}
-else
-  apt-get -qq install \
-    puppet=${PUPPET_VERSION} \
-    puppet-common=${PUPPET_VERSION}
-fi
+apt-get -qq install \
+  puppet=${PUPPET_VERSION} \
+  puppet-common=${PUPPET_VERSION}
